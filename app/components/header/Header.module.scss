@@ -1,0 +1,35 @@
+@use "../../styles/_variables.scss" as *;
+
+.container {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  box-shadow: $pale-blue 0px 7px 29px 0px;
+  height: 70px;
+  padding: 5px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.initials {
+  color: $heading-color;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.navLinks {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+}
+
+.navLink {
+  color: $light-ocean-blue;
+  font-size: 1.5rem;
+  font-weight: 600;
+  &:hover {
+    text-decoration: underline;
+  }
+}

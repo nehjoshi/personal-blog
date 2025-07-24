@@ -1,0 +1,88 @@
+@use "./styles/_variables.scss" as *;
+
+.main {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  padding: 100px 200px;
+  position: relative;
+  @include flex-row(20px, space-between);
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 50%;
+}
+
+.helloText {
+  color: $text-dark;
+  font-size: 2rem;
+  font-weight: 700;
+
+  span {
+    color: $heading-color;
+  }
+}
+
+.title {
+  font-weight: 900;
+  color: $heading-color;
+  font-size: 4.5rem;
+}
+
+.aboutText {
+  color: $text-light;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.row {
+  @include flex-row(30px, flex-start);
+}
+
+.btn {
+  padding: 10px 30px;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.2s opacity ease;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
+
+.learnMoreBtn {
+  background-color: $heading-color;
+  color: #fff;
+}
+
+.getResumeBtn {
+  background-color: $sky-blue;
+}
+
+.right {
+  width: 32.5%;
+}
+
+.imageContainer {
+  position: relative;
+  height: 600px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $pale-blue;
+  box-shadow: 0px 4px 4px 25px #e1f2ff;
+}
+
+.profileImg {
+  object-fit: fill;
+  object-position: top;
+}
