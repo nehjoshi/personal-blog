@@ -1,0 +1,81 @@
+@use "../styles/variables" as *;
+
+.container {
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 70px);
+  padding: 100px 100px;
+}
+
+.centerWrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
+.title {
+  text-align: center;
+  color: $heading-color;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $text-dark;
+}
+
+.blogList {
+  margin-top: 40px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   border: 1px solid red;
+  width: 100%;
+  gap: 30px;
+}
+
+.blogListItem {
+  border: 1px solid rgb(239, 239, 239);
+  border-radius: 10px;
+  @include flex-row(15px);
+  width: 90%;
+  position: relative;
+  transition: 0.2s all ease;
+  &:hover {
+    cursor: pointer;
+    border-color: $heading-color;
+  }
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 10px;
+}
+
+.postTitle {
+  color: $ocean-blue;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.postDesc {
+  color: $text-dark;
+  font-size: 1.2rem;
+}
+
+.postDate {
+  color: $text-light;
+}

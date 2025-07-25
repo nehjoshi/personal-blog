@@ -10,7 +10,7 @@ export default function Header() {
           <Link href="/">Resume</Link>
         </li>
         <li className={styles.navLink}>
-          <Link href="/">Blog</Link>
+          <Link href="/blog">Blog</Link>
         </li>
         <li className={styles.navLink}>
           <Link href="/">Contact</Link>
