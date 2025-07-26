@@ -1,8 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
+import Head from "next/head";
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <title>Neh Joshi | Software Engineer</title>
+      <meta name="description" content="Learn more about Neh Joshi's experience as a software engineer. See his projects, resume and personal blog" />
+    </Head>
     <main className={styles.main}>
       <div className={styles.left}>
         <p className={styles.helloText}>
@@ -31,5 +37,6 @@ export default function Home() {
         </div>
       </div>
     </main>
+    </>
   );
 }

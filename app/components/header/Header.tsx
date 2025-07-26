@@ -1,10 +1,10 @@
-import Link from "next/link";
 import styles from "./Header.module.scss";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <nav className={styles.container}>
-      <span className={styles.initials}>NJ</span>
+      <Link className={styles.initials} href="/">NJ</Link>
       <ul className={styles.navLinks}>
         <li className={styles.navLink}>
           <Link href="/">Resume</Link>
