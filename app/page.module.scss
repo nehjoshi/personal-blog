@@ -5,8 +5,13 @@
   width: 100vw;
   padding: 100px 200px;
   position: relative;
+  flex: 1;
+}
+
+.hero {
   @include flex-row(20px, space-between);
   align-items: center;
+  display: flex;
 }
 
 .left {
@@ -30,7 +35,8 @@
 .title {
   font-weight: 900;
   color: $heading-color;
-  font-size: 4.5rem;
+  // font-size: 4.5rem;
+  font-size: clamp(2.5rem, 2.5vw + 1.3rem, 4.5rem);
 }
 
 .aboutText {
@@ -85,4 +91,40 @@
 .profileImg {
   object-fit: fill;
   object-position: top;
+}
+
+@media screen and (max-width: $breakpoint-xxl) {
+  .main {
+    padding: 50px 75px;   
+  }
+  .hero {
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .hero {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .left {
+    width: 100%;
+    order: 2;
+    align-items: center;
+  }
+
+  .right {
+    width: 20%;
+    order: 1;
+  }
+
+  .imageContainer {
+    height: 150px;
+    box-shadow: 0px 4px 4px 10px #e1f2ff;
+  }
+
+  .aboutText {
+    text-align: center;
+  }
 }

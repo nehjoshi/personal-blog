@@ -84,7 +84,7 @@ function BlogListItem({ title, slug, description, createdAt, imageUrl }: Post) {
             <Image
               src={urlFor(imageUrl)!.url()}
               className={styles.postImage}
-              alt=""
+              alt={`Cover image for blog post: ${title}`}
               fill
             />
           </div>

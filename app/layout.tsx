@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header/Header";
 import ProgressBar from "./components/progressBar/ProgressBar";
 import { Suspense } from "react";
+import Footer from "./components/footer/Footer";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -30,6 +31,7 @@ export default function RootLayout({
           <ProgressBar />
         </Suspense>
         {children}
+        <Footer />
       </body>
     </html>
   );

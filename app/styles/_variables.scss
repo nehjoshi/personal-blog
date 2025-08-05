@@ -1,3 +1,4 @@
+// Theme colors
 $heading-color: #3b28cc;
 $ocean-blue: #2667ff;
 $light-ocean-blue: #3f8efc;
@@ -5,6 +6,14 @@ $sky-blue: #87bfff;
 $pale-blue: #add7f6;
 $text-dark: #303030;
 $text-light: #808080;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
 
 @mixin flex-row($gap: 10px, $justifyContent: center) {
     display: flex;
