@@ -19,13 +19,13 @@
 .title {
   text-align: center;
   color: $heading-color;
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 2.2vw + 1rem, 3rem);
   font-weight: 900;
 }
 
 .subtitle {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.2vw + 0.5rem, 1.5rem);
   font-weight: 400;
   color: $text-dark;
 }
@@ -91,16 +91,61 @@
 
 .postTitle {
   color: $ocean-blue;
-  font-size: 1.7rem;
+  font-size: clamp(1.2rem, 1.2vw + 1rem, 1.7rem);
   font-weight: 700;
 }
 
 .postDesc {
   color: $text-dark;
-  font-size: 1.2rem;
+  font-size: clamp(0.5rem, 0.5vw + 1rem, 1.2rem);
 }
 
 .postDate {
   color: $text-light;
   margin-top: auto;
+}
+
+@media screen and (max-width: $breakpoint-xl) {
+  .centerWrapper {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .container {
+    padding: 50px 50px;
+  }
+
+  .centerWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .container {
+    padding: 50px 50px;
+  }
+
+  .blogListItem {
+    width: 100%;
+  }
+
+  .linkWrapper {
+    flex-direction: column;
+  }
+
+  .left {
+    height: 200px;
+    width: 100%;
+  }
+
+  .postDate {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .container {
+    padding: 30px 30px;
+  }
 }

@@ -33,3 +33,24 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: $breakpoint-md) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+
+  .center {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  .left {
+    display: none;
+  }
+}
