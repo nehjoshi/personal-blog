@@ -5,7 +5,7 @@ import styles from "./BlogComment.module.scss";
 const RECIPIENT = "nehjoshi5@gmail.com";
 
 type PropTypes = {
-  title: String;
+  title: string;
 };
 
 export default function BlogComment({ title }: PropTypes) {
@@ -21,7 +21,7 @@ export default function BlogComment({ title }: PropTypes) {
     <section className={styles.feedbackContainer}>
       <h2>Have some thoughts?</h2>
       <p>
-        I'd love to hear what you think of this post! Enter your thoughts in the
+        I&apos;d love to hear what you think of this post! Enter your thoughts in the
         box below, and click the <span className={styles.sendSpan}>Send</span>{" "}
         button to send me an email.
       </p>
@@ -31,6 +31,7 @@ export default function BlogComment({ title }: PropTypes) {
         id="commenter-name"
         className={styles.nameInput}
         onChange={(e) => setName(e.target.value)}
+        placeholder="John Doe"
       />
       <label htmlFor="user-comment">Message</label>
       <textarea
