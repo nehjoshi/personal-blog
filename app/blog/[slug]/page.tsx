@@ -3,15 +3,16 @@ import styles from "./page.module.scss";
 import { SanityDocument } from "next-sanity";
 import { PortableText } from "@portabletext/react";
 import { Metadata } from "next";
+import BlogComment from "@/app/components/blogComment/BlogComment";
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 
 const options = { next: { revalidate: 30 } };
 
 export async function generateMetadata({
-  params
+  params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const post = await client.fetch<SanityDocument>(
     POST_QUERY,
@@ -26,15 +27,17 @@ export async function generateMetadata({
 }
 
 export default async function BlogPost({
-  params
+  params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-    const post = await client.fetch<SanityDocument>(
+  const post = await client.fetch<SanityDocument>(
     POST_QUERY,
     await params,
     options
   );
+
+  
 
   return (
     <main className={styles.container}>
@@ -43,7 +46,9 @@ export default async function BlogPost({
         <div className={styles.body}>
           <PortableText value={post.body} />
         </div>
+        <hr className={styles.divider} />
       </section>
+      <BlogComment title={post.title} />
     </main>
   );
 }
