@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .feedbackContainer {
   margin: 0 auto;
@@ -21,7 +21,8 @@
   label {
     font-size: 1.5rem;
   }
-  .textArea, .nameInput {
+  .textArea,
+  .nameInput {
     font-family: inherit;
     padding: 5px 5px;
     font-size: 1.2rem;
@@ -62,13 +63,13 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-lg) { 
+@media screen and (max-width: $breakpoint-lg) {
   .feedbackContainer {
     width: 80%;
   }
 }
 
-@media screen and (max-width: $breakpoint-md) { 
+@media screen and (max-width: $breakpoint-md) {
   .feedbackContainer {
     width: 100%;
   }

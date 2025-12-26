@@ -1,28 +1,21 @@
-import { client } from "@/app/utils/sanityClient";
-import styles from "./page.module.scss";
-import { SanityDocument } from "next-sanity";
-import { PortableText } from "@portabletext/react";
-import { Metadata } from "next";
-import BlogComment from "@/app/components/blogComment/BlogComment";
+import { PortableText } from '@portabletext/react';
+import { Metadata } from 'next';
 
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
+import { getOne } from '@/app/api/getOne';
+import BlogComment from '@/app/components/blogComment/BlogComment';
 
-const options = { next: { revalidate: 30 } };
+import styles from './page.module.scss';
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = await client.fetch<SanityDocument>(
-    POST_QUERY,
-    await params,
-    options
-  );
+  const post = await getOne((await params).slug);
 
   return {
-    title: `Neh Joshi | ${post?.title}` || "Blog Post",
-    description: post?.description || "Read this blog post.",
+    title: `Neh Joshi | ${post?.title}` || 'Blog Post',
+    description: post?.description || 'Read this blog post.',
   };
 }
 
@@ -31,13 +24,7 @@ export default async function BlogPost({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const post = await client.fetch<SanityDocument>(
-    POST_QUERY,
-    await params,
-    options
-  );
-
-  
+  const post = await getOne((await params).slug);
 
   return (
     <main className={styles.container}>

@@ -1,6 +1,7 @@
-import Image from "next/image";
-import styles from "./page.module.scss";
-import Head from "next/head";
+import Head from 'next/head';
+import Image from 'next/image';
+
+import styles from './page.module.scss';
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
       <Head>
         <title>Neh Joshi | Software Engineer</title>
         <meta
-          name="description"
           content="Learn more about Neh Joshi's experience as a software engineer. See his projects, resume and personal blog"
+          name="description"
         />
       </Head>
       <main className={styles.main}>
@@ -22,7 +23,7 @@ export default function Home() {
             <p className={styles.aboutText}>
               With over 2.5 years of experience working on scalable products
               used by millions across the world, I specialize in optimizing
-              backends and infrastructure.{" "}
+              backends and infrastructure.{' '}
             </p>
             <div className={styles.row}>
               <button className={`${styles.btn} ${styles.learnMoreBtn}`}>
@@ -38,18 +39,16 @@ export default function Home() {
           <div className={styles.right}>
             <div className={styles.imageContainer}>
               <Image
-                src={"/neh.png"}
-                fill
                 alt=""
                 className={styles.profileImg}
+                fill
+                src={'/neh.png'}
               />
             </div>
           </div>
         </section>
 
-        <section className={styles.section2}>
-          
-        </section>
+        <section className={styles.section2}></section>
       </main>
     </>
   );

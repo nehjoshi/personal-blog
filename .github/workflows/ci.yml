@@ -19,6 +19,9 @@ jobs:
 
       - name: Run Linter
         run: npm run lint
-      
+
+      - name: Run formatter
+        run: npm run format
+
       - name: Try creating a new Build
         run: npm run build

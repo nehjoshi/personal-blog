@@ -1,8 +1,9 @@
-"use client";
-import styles from "./Header.module.scss";
-import Link from "next/link";
-import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+'use client';
+import Link from 'next/link';
+import { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+
+import styles from './Header.module.scss';
 
 export default function Header() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);

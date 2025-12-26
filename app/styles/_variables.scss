@@ -16,8 +16,8 @@ $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
 @mixin flex-row($gap: 10px, $justifyContent: center) {
-    display: flex;
-    flex-direction: row;
-    gap: $gap;
-    justify-content: $justifyContent;
+  display: flex;
+  flex-direction: row;
+  gap: $gap;
+  justify-content: $justifyContent;
 }

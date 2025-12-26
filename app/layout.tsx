@@ -1,19 +1,21 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
-import Header from "./components/header/Header";
-import ProgressBar from "./components/progressBar/ProgressBar";
-import { Suspense } from "react";
-import Footer from "./components/footer/Footer";
+import './globals.css';
+
+import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
+import { Suspense } from 'react';
+
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import ProgressBar from './components/progressBar/ProgressBar';
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: '--font-montserrat',
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
-  title: "Neh Joshi | Software Engineer",
+  title: 'Neh Joshi | Software Engineer',
   description:
     "Learn more about Neh Joshi's experience as a software engineer. See his projects, resume and personal blog",
 };
